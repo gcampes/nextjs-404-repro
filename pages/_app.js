@@ -8,4 +8,10 @@ function _app({ Component, pageProps, err }) {
   );
 }
 
+_app.getInitialProps = async function getInitialProps(ctx) {
+  const appProps = await App.getInitialProps(ctx);
+
+  return appProps;
+};
+
 export default _app;
